@@ -1,0 +1,25 @@
+<div class="row justify-content-center">
+    <div class="col-md-6">
+
+        <div class="card" style="width: 25rem;">
+            <img [src]="profile.picture" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Perfil de usuario</h5>
+                <p class="card-text">El usuario {{profile.given_name}} se ha autenticado con auth0.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Nombre: {{profile.given_name}}</li>
+                <li class="list-group-item">Apellido: {{profile.family_name}}</li>
+            </ul>
+            <div class="card-body">
+                <div class="text-muted">
+                    Actualizado al: {{profile.updated_at | date:'dd MM yyyy'}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<pre> {{profile | json}}</pre>
